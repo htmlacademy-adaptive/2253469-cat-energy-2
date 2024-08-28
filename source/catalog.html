@@ -4,27 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/source/styles/">
-<<<<<<< HEAD
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/source/manifest.webmanifest">
-=======
->>>>>>> origin/master
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" sizes="152x152" href="./favicons/152.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/16.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <title>cat energy</title>
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo" href="#">
-<<<<<<< HEAD
-      <img class="main-header__logo-picture" src="images/logo-mobile.svg" width="33" height="35" alt="Кот Энерджи">
-      <img class="image-logo" src="images/main-logo.svg" width="101" height="18" alt="Главный логотип">
-=======
-      <img class="main-header__logo-picture" src="images/logo-mobile.png" width="33" height="35" alt="Кот Энерджи">
-      <img class="image-logo" src="images/main-logo.png" width="101" height="18" alt="Главный логотип">
->>>>>>> origin/master
+      <picture>
+        <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-desktop.svg" width="70" height="59">
+        <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-tablet.svg" width="60" height="50">
+        <img class="main-header__logo-picture" src="images/logo-mobile.svg" width="33" height="35" alt="Кот Энерджи">
+      </picture>
+      <img class="image-logo" src="images/main-logo-mobile.svg" width="101" height="18" alt="Главный логотип">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toogle" type="button">
@@ -56,7 +52,6 @@
     <section class="product-cards">
       <div class="product-cards__wrapper">
         <h1 class="product-cards__title">Каталог Продукции</h1>
-<<<<<<< HEAD
         <article class="product-cards__item">
           <a class="product-cards__link" href="#">
             <picture>
@@ -230,121 +225,6 @@
         <h2 class="show-more__title">Показать еще 100500 товаров</h2>
         <p class="show-more__discription">На самом деле вкусов гораздо больше</p>
         <a class="show-more__button button" href="#">Показать все</a>
-=======
-        <ul class="product-cards__list">
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-green-500.png" width="68" height="86" alt="Банка с едой курица 500г">
-            <h2 class="product-cards__name">cat energy pro 500 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">500 г</dd>
-              <dt class="stats__discription">Вкус
-              </dt>
-              <dd class="stats__number">Курица</dd>
-              <dt class="stats__discription">Цена
-              </dt>
-              <dd class="stats__number">700 ₽</dd>
-            </dl>
-          </li>
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-orange-1000.png" width="84" height="100" alt="Банка с едой курица 1000г">
-            <h2 class="product-cards__name">cat energy pro 1000 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">1000 г</dd>
-              <dt class="stats__discription">Вкус
-              </dt>
-              <dd class="stats__number">Курица</dd>
-              <dt class="stats__discription">Цена
-              </dt>
-              <dd class="stats__number">1000 ₽</dd>
-            </dl>
-          </li>
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-green-500.png" width="68" height="78" alt="Банка с едой рыба 500г">
-            <h2 class="product-cards__name">cat energy pro 500 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">500 г</dd>
-              <dt class="stats__discription">
-              </dt>
-              <dd class="stats__number">Рыба</dd>
-              <dt class="stats__discription">
-              </dt>
-              <dd class="stats__number">700 ₽</dd>
-            </dl>
-          </li>
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-green-1000.png" width="84" height="100" alt="Банка с едой рыба 1000г">
-            <h2 class="product-cards__name">cat energy pro 1000 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">1000 г</dd>
-              <dt class="stats__discription">Вкус
-              </dt>
-              <dd class="stats__number">Рыба</dd>
-              <dt class="stats__discription">Цена
-              </dt>
-              <dd class="stats__number">1000 ₽</dd>
-            </dl>
-          </li>
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-blue-500.png" width="68" height="78" alt="Банка с едой гречка 500г">
-            <h2 class="product-cards__name">cat energy slim 500 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">500 г</dd>
-              <dt class="stats__discription">Вкус
-              </dt>
-              <dd class="stats__number">Гречка</dd>
-              <dt class="stats__discription">Цена
-              </dt>
-              <dd class="stats__number">400 ₽</dd>
-            </dl>
-          </li>
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-blue-1000.png" width="84" height="100" alt="Банка с едой гречка 1000г">
-            <h2 class="product-cards__name">cat energy slim 1000 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">1000 г</dd>
-              <dt class="stats__discription">Вкус
-              </dt>
-              <dd class="stats__number">Гречка</dd>
-              <dt class="stats__discription">Цена
-              </dt>
-              <dd class="stats__number">700 ₽</dd>
-            </dl>
-          </li>
-          <li class="product-cards__item">
-            <img class="product-cards__image" src="images/product-cards/can-purple-500.png" width="72" height="84" alt="Банка с едой рис  500г">
-            <h2 class="product-cards__name">cat energy slim 500 г</h2>
-            <dl class="product-cards__stats stats">
-              <dt class="stats__discription">Масса
-              </dt>
-              <dd class="stats__number">500 г</dd>
-              <dt class="stats__discription">Вкус
-              </dt>
-              <dd class="stats__number">Рис</dd>
-              <dt class="stats__discription">Цена
-              </dt>
-              <dd class="stats__number">500 ₽</dd>
-            </dl>
-          </li>
-
-        </ul>
-        <div class="show-more">
-          <h2 class="show-more__title">Показать еще 100500 товаров</h2>
-          <p class="show-more__discription">На самом деле вкусов гораздо больше</p>
-          <button class="show-more__button button" type="button">Показать все</button>
-        </div>
->>>>>>> origin/master
       </div>
     </section>
     <section class="extra-products">
@@ -355,11 +235,7 @@
             <h3 class="extra-products__text">Сахарозаменитель</h3>
             <span class="extra-products__discription">1 упаковка (100г)</span>
             <span class="extra-products__price">200 ₽</span>
-<<<<<<< HEAD
             <a class="extra-products__button button" href="#">Заказать</a>
-=======
-            <button class="extra-products__button button" type="button">Заказать</button>
->>>>>>> origin/master
           </li>
           <li class="extra-products__item">
             <h3 class="extra-products__text">Питьевая вода</h3>
@@ -367,11 +243,7 @@
               <span class="extra-products__discription">5 литров</span>
               <span class="extra-products__price">50 ₽</span>
             </div>
-<<<<<<< HEAD
             <a class="extra-products__button button" href="#">Заказать</a>
-=======
-            <button class="extra-products__button button" type="button">Заказать</button>
->>>>>>> origin/master
           </li>
           <li class="extra-products__item">
             <h3 class="extra-products__text">Молоко</h3>
@@ -379,11 +251,7 @@
               <span class="extra-products__discription">1 литр</span>
               <span class="extra-products__price">100 ₽</span>
             </div>
-<<<<<<< HEAD
             <a class="extra-products__button button" href="#">Заказать</a>
-=======
-            <button class="extra-products__button button" type="button">Заказать</button>
->>>>>>> origin/master
           </li>
           <li class="extra-products__item">
             <h3 class="extra-products__text">Витамины</h3>
@@ -391,11 +259,7 @@
               <span class="extra-products__discription">1 упаковка (30г)</span>
               <span class="extra-products__price">300 ₽</span>
             </div>
-<<<<<<< HEAD
             <a class="extra-products__button button" href="#">Заказать</a>
-=======
-            <button class="extra-products__button button" type="button">Заказать</button>
->>>>>>> origin/master
           </li>
         </ul>
         <div class="extra-products__order">
@@ -408,40 +272,22 @@
         <h2 class="actions__title">Акции и новинки</h2>
         <p class="actions__discription">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
         <form class="actions__following-form" action="https://echo.htmlacademy.ru" method="post">
-<<<<<<< HEAD
           <label class="visually-hidden" for="field-subscribe">Подписаться</label>
           <input class="actions__field-subscribe" placeholder="кuklachev@gmail.com" type="email" name="field-subscribe" id="field-subscribe">
-=======
-          <label class="visually-hidden">Подписаться
-            <input class="actions__field-subscribe" placeholder="кuklachev@gmail.com" type="email" name="field-subscribe">
-          </label>
->>>>>>> origin/master
           <button class="actions__following-button button" type="button">Подписаться</button>
         </form>
       </div>
     </section>
     <footer class="main-footer">
-      <div class="main-footer__adress adress">
-<<<<<<< HEAD
-        <h2 class="adress__tittle">приглашаем к сотрудничеству дилеров!</h2>
-        <address class="adress__text">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</address>
-      </div>
       <div class="main-footer__wrapper">
+        <div class="main-footer__adress adress">
+          <span class="adress__tittle">приглашаем к сотрудничеству дилеров!</span>
+          <p class="adress__text">ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург</p>
+        </div>
         <a class="main-footer__logo" href="#">
-          <img class="image-logo" src="images/main-logo.svg" width="101" height="18" alt="Главный логотип">
-=======
-        <b class="adress__tittle">приглашаем к сотрудничеству дилеров!</b>
-        <p class="adress__text">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
-        <img class="adress__map" src="images/adress-map.png" width="320" height="362" alt="Расположение на карте">
-      </div>
-      <div class="main-footer__wrapper">
-        <a class="main-footer__logo" href="#">
-          <img class="image-logo" src="images/main-logo.png" width="128" height="24" alt="Главный логотип">
->>>>>>> origin/master
+          <img class="image-logo" src="images/main-logo-mobile.svg" width="101" height="18" alt="Главный логотип">
         </a>
         <ul class="main-footer__social">
           <li>
@@ -461,12 +307,9 @@
           </li>
         </ul>
         <a class="main-footer__academy-logo" href="https://htmlacademy.ru/">
-<<<<<<< HEAD
           <span class="main-footer__academy-title">HTML Academy</span>
           <img class="academy-logo" src="images/academy-logo-.svg" width="27" height="34" alt="Логотип Академии">
-=======
           <span class="visually-hidden">Логотип Академии</span>
->>>>>>> origin/master
         </a>
       </div>
     </footer>
