@@ -1,5 +1,5 @@
 .advantages {
-
+  color: #000000;
 }
 
 .advantages__wrapper {
@@ -7,29 +7,45 @@
 }
 
 .advantages__list {
-
+  margin: 0;
+  list-style-type: none;
 }
 
 .advantages__item {
-
 }
 
 .advantages__item--weightless {
-
+  background-image: url("../../icons/stack.svg#cat-weightless");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
 }
 
 .advantages__item--weightup {
-
+  background-image: url("../../icons/stack.svg#pantere-weightup");
+  background-repeat: no-repeat;
+  background-size: 50px 53px;
 }
 
 .advantages__tittle {
-
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: 110px;
+  font-size: 24px;
+  line-height: 37px;
 }
 
 .advantages__discription {
-
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
 }
 
 .advantages__link {
-
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
 }

@@ -1,5 +1,5 @@
 .usability {
-
+  color: #444444;
 }
 
 .usability__wrapper {
@@ -7,31 +7,47 @@
 }
 
 .usability__tittle {
-
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
 }
 
 .usability__list {
-
+  list-style-type: none;
 }
 
 .usability__item {
-
+  padding-bottom: 24px;
+  padding-top: 42px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 100px;
 }
 
 .usability__item--leaf {
-
+  background-image: url("../../icons/stack.svg#icon-leaf");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
 }
 
 .usability__item--powder {
-
+  background-image: url("../../icons/stack.svg#icon-powder");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
 }
 
 .usability__item--cutlery {
-
+  background-image: url("../../icons/stack.svg#icon-cutlery");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
 }
 
 .usability__item--clock {
-
+  background-image: url("../../icons/stack.svg#icon-clock");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
 }
 
 .usability__discription {

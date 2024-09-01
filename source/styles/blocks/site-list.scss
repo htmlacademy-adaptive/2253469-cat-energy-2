@@ -3,7 +3,10 @@
 }
 
 .site-list__link {
-
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .site-list__link--current {

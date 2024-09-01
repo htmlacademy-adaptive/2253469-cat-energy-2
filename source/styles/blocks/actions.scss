@@ -1,5 +1,5 @@
 .actions {
-
+  color: #000000;
 }
 
 .actions__wrapper {
@@ -7,11 +7,14 @@
 }
 
 .actions__title {
-
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
 }
 
 .actions__discription {
-
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .actions__following-form {
@@ -19,7 +22,9 @@
 }
 
 .actions__field-subscribe {
-
+  font-size: 20px;
+  line-height: 30px;
+  color: #444444;
 }
 
 .actions__following-button {

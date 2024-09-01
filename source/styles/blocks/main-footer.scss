@@ -15,7 +15,8 @@
 }
 
 .main-footer__social {
-
+  margin: 0;
+  list-style-type: none;
 }
 
 .main-footer__social-link {
@@ -23,21 +24,36 @@
 }
 
 .main-footer__social-link--vk {
-
+  display: inline-block;
+  mask-image: url("../../icons/stack.svg#vkontakte-logo");
+  width: 27px;
+  height: 17px;
+  background-color: #666666;
 }
 
 .main-footer__social-link--yutb {
-
+  display: inline-block;
+  mask-image: url("../../icons/stack.svg#youtube-logo");
+  width: 24px;
+  height: 19px;
+  background-color: #666666;
 }
 
 .main-footer__social-link--tlgm {
-
+  display: inline-block;
+  mask-image: url("../../icons/stack.svg#telegram-logo");
+  width: 20px;
+  height: 17px;
+  background-color: #666666;
 }
 
 .main-footer__academy-logo {
-
+  text-decoration: none;
 }
 
 .main-footer__academy-title {
-
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
 }
