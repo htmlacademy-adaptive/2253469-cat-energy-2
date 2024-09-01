@@ -20,31 +20,44 @@
 }
 
 .main-footer__social-link {
+  &--vk::before {
+    content: "";
+    display: inline-block;
+    mask-image: url("../../icons/stack.svg#vkontakte-logo");
+    width: 27px;
+    height: 17px;
+    background-color: #666666;
+  }
 
-}
+  &--vk:hover::before &--vk:focus::before {
+    background-color: #68b738;
+  }
 
-.main-footer__social-link--vk {
-  display: inline-block;
-  mask-image: url("../../icons/stack.svg#vkontakte-logo");
-  width: 27px;
-  height: 17px;
-  background-color: #666666;
-}
+  &--yutb::before {
+    content: "";
+    display: inline-block;
+    mask-image: url("../../icons/stack.svg#youtube-logo");
+    width: 24px;
+    height: 19px;
+    background-color: #666666;
+  }
 
-.main-footer__social-link--yutb {
-  display: inline-block;
-  mask-image: url("../../icons/stack.svg#youtube-logo");
-  width: 24px;
-  height: 19px;
-  background-color: #666666;
-}
+  &--yutb:hover::before &--yutb:focus::before {
+    background-color: #68b738;
+  }
 
-.main-footer__social-link--tlgm {
-  display: inline-block;
-  mask-image: url("../../icons/stack.svg#telegram-logo");
-  width: 20px;
-  height: 17px;
-  background-color: #666666;
+  &--tlgm::before {
+    content: "";
+    display: inline-block;
+    mask-image: url("../../icons/stack.svg#telegram-logo");
+    width: 20px;
+    height: 17px;
+    background-color: #666666;
+  }
+
+  &--tlgm:hover::before &--tlgm:focus::before {
+    background-color: #68b738;
+  }
 }
 
 .main-footer__academy-logo {

@@ -12,18 +12,17 @@
 }
 
 .advantages__item {
-}
+  &--weightless {
+    background-image: url("../../icons/stack.svg#cat-weightless");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+  }
 
-.advantages__item--weightless {
-  background-image: url("../../icons/stack.svg#cat-weightless");
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-}
-
-.advantages__item--weightup {
-  background-image: url("../../icons/stack.svg#pantere-weightup");
-  background-repeat: no-repeat;
-  background-size: 50px 53px;
+  &--weightup {
+    background-image: url("../../icons/stack.svg#pantere-weightup");
+    background-repeat: no-repeat;
+    background-size: 50px 53px;
+  }
 }
 
 .advantages__tittle {
