@@ -4,26 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicons.iso">
-  <link rel="stylesheet" href="//source/styles/styles.scss">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" sizes="152x152" href="./favicons/152.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/16.png">
+  <link rel="icon" type="imaxe/x-icon" href="./favicon.ico">
   <link rel="manifest" href="/source/manifest.webmanifest">
-  =======
-  >>>>>>> origin/master
   <title>cat energy</title>
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-picture" src="images/logo-mobile.svg" width="33" height="35" alt="Кот Энерджи">
-      <img class="image-logo" src="images/main-logo.svg" width="101" height="18" alt="Главный логотип">
-      =======
-      <img class="main-header__logo-picture" src="images/logo-mobile.png" width="33" height="35" alt="Кот Энерджи">
-      <img class="image-logo" src="images/main-logo.png" width="101" height="18" alt="Главный логотип">
-      >>>>>>> origin/master
+      <picture>
+        <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-desktop.svg" width="70" height="59">
+        <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-tablet.svg" width="60" height="50">
+        <img class="main-header__logo-picture" src="images/logo-mobile.svg" width="33" height="35" alt="Кот Энерджи">
+      </picture>
+      <img class="image-logo" src="images/main-logo-mobile.svg" width="101" height="18" alt="Главный логотип">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toogle" type="button">
@@ -57,14 +55,9 @@
         <p class="welcome__slogan">Занялся собой? Займись котом</p>
         <picture>
           <source media="(min-width: 1440px)" srcset="images/main-can-desktop@1x.png 1x, images/main-can-desktop@2x.png 2x" type="image/png" width="552" height="499">
-          <source media="(min-width: 768px)" srcset="images/main-can-tablet@1x.png 1x, images/main-can-tablet@2.png 2x" type="image/png" width="709" height="609">
+          <source media="(min-width: 768px)" srcset="images/main-can-tablet@1x.png 1x, images/main-can-tablet@2x.png 2x" type="image/png" width="709" height="609">
           <img class="welcome__image-can" src="images/main-can-mobile@1x.png" width="280" height="270" alt="Банка с кормом" srcset="images/main-can-mobile@2x.png 2x">
         </picture>
-        <a class="welcome__choose-programm" href="#">
-          <span class="visually-hidden">Ссылка на подбор программы</span>
-        </a>
-        =======
-        <img class="welcome__image-can" src="images/image-can.png" width="280" height="270" alt="Банка с кормом">
         <a class="welcome__choose-programm" href="catalog.html">
 
           Подобрать Программу
@@ -205,6 +198,7 @@
       </div>
     </footer>
   </main>
+  {% include 'njk/footer.njk'%}
 
 </body>
 
