@@ -1,9 +1,17 @@
 .main-footer {
-
 }
 
 .main-footer__wrapper {
+  display: flex;
 
+  @media (min-width: $mobile-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .main-footer__adress {
@@ -11,62 +19,66 @@
 }
 
 .main-footer__logo {
-
 }
 
 .main-footer__social {
+  padding: 0;
+  justify-content: space-between;
+  display: flex;
+  gap: 24px;
   margin: 0;
   list-style-type: none;
 }
 
 .main-footer__social-link {
-  &--vk::before {
+  &::before {
     content: "";
     display: inline-block;
-    mask-image: url("../../icons/stack.svg#vkontakte-logo");
     width: 27px;
-    height: 17px;
-    background-color: #666666;
-  }
-
-  &--vk:hover::before &--vk:focus::before {
-    background-color: #68b738;
-  }
-
-  &--yutb::before {
-    content: "";
-    display: inline-block;
-    mask-image: url("../../icons/stack.svg#youtube-logo");
-    width: 24px;
     height: 19px;
     background-color: #666666;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
   }
 
-  &--yutb:hover::before &--yutb:focus::before {
-    background-color: #68b738;
+  &:hover::before {
+    background-color: $basic-green;
+  }
+
+  &:focus::before {
+    background-color: $basic-green;
+  }
+
+  &:active::before {
+    background-color: $basic-green;
+    opacity: 0.3;
+  }
+
+  &--vk::before {
+    mask-image: url("../../icons/stack.svg#vkontakte-logo");
+  }
+
+
+  &--yutb::before {
+    mask-image: url("../../icons/stack.svg#youtube-logo");
   }
 
   &--tlgm::before {
-    content: "";
-    display: inline-block;
     mask-image: url("../../icons/stack.svg#telegram-logo");
-    width: 20px;
-    height: 17px;
-    background-color: #666666;
-  }
-
-  &--tlgm:hover::before &--tlgm:focus::before {
-    background-color: #68b738;
   }
 }
 
 .main-footer__academy-logo {
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
+  gap: 140px;
 }
 
 .main-footer__academy-title {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
-  color: #444444;
+  color: $dark-grey;
 }

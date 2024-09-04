@@ -1,5 +1,6 @@
 .adress {
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .adress__title {
@@ -7,11 +8,22 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .adress__text {
+  font-style: normal;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 20px;
-  color: #444444;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

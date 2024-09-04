@@ -1,5 +1,5 @@
 .usability {
-  color: #444444;
+  color: $dark-grey;
 }
 
 .usability__wrapper {
@@ -10,11 +10,24 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  color: #000000;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .usability__list {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .usability__item {
@@ -24,33 +37,39 @@
   font-size: 14px;
   line-height: 18px;
   padding-left: 100px;
-
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
 
   &--leaf {
     background-image: url("../../icons/stack.svg#icon-leaf");
-    background-repeat: no-repeat;
-    background-size: 60px 60px;
   }
 
   &--powder {
     background-image: url("../../icons/stack.svg#icon-powder");
-    background-repeat: no-repeat;
-    background-size: 60px 60px;
   }
 
   &--cutlery {
     background-image: url("../../icons/stack.svg#icon-cutlery");
-    background-repeat: no-repeat;
-    background-size: 60px 60px;
   }
 
   &--clock {
     background-image: url("../../icons/stack.svg#icon-clock");
-    background-repeat: no-repeat;
-    background-size: 60px 60px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 204px;
+    height: 72px;
+    background-size: 80px 80px;
   }
 }
 
 .usability__discription {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
 
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

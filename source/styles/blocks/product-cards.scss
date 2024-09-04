@@ -3,14 +3,26 @@
 }
 
 .product-cards__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 325px 325px;
+  }
 
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 250px 250px 250px 250px;
+  }
 }
 
 .product-cards__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  color: #000000;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .product-cards__item {
@@ -19,7 +31,7 @@
 
 .product-cards__link {
   text-decoration: none;
-  color: #222222;
+  color: $light-grey;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 16px;
@@ -30,16 +42,29 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .product-cards__stats {
+  display: grid;
+  grid-template-columns: 70px 72px;
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    grid-template-columns: 130px 130px;
+  }
 }
 
 .product-cards__button {
   text-decoration: none;
-  color: #ffffff;
+  color: $white;
 }

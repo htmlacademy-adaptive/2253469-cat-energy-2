@@ -1,5 +1,10 @@
 .welcome {
-  color: #ffffff;
+  color: $white;
+
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+  }
 }
 
 .welcome__wrapper {
@@ -9,11 +14,22 @@
 .welcome__tittle {
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    width: 414px;
+  }
 }
 
 .welcome__slogan {
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .welcome__image-can {
@@ -25,5 +41,5 @@
   line-height: 20px;
   text-decoration: none;
   list-style-type: none;
-  color: #ffffff;
+  color: $white;
 }
