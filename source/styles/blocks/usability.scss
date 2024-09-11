@@ -36,30 +36,96 @@
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
-  padding-left: 100px;
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
+  position: relative;
 
-  &--leaf {
-    background-image: url("../../icons/stack.svg#icon-leaf");
+  &--leaf::before,
+  &--powder::before,
+  &--cutlery::before,
+  &--clock::before {
+    content: "";
+    mask-image: url("../../icons/stack.svg#square-background");
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-color: $basic-green;
   }
 
-  &--powder {
-    background-image: url("../../icons/stack.svg#icon-powder");
+  &--leaf::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#leaf");
+    background-color: $white;
+    position: absolute;
+    width: 26px;
+    height: 30px;
+    top: 57px;
+    left: 18px;
   }
 
-  &--cutlery {
-    background-image: url("../../icons/stack.svg#icon-cutlery");
+  &--powder::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#powder");
+    background-color: $white;
+    position: absolute;
+    width: 26px;
+    height: 30px;
+    top: 57px;
+    left: 18px;
   }
 
-  &--clock {
-    background-image: url("../../icons/stack.svg#icon-clock");
+  &--cutlery::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#cutlery");
+    background-color: $white;
+    position: absolute;
+    width: 26px;
+    height: 30px;
+    top: 57px;
+    left: 18px;
+  }
+
+  &--clock::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#clock");
+    background-color: $white;
+    position: absolute;
+    width: 26px;
+    height: 30px;
+    top: 57px;
+    left: 18px;
   }
 
   @media (min-width: $tablet-width) {
     width: 204px;
     height: 72px;
     background-size: 80px 80px;
+
+    &--leaf::before,
+    &--powder::before,
+    &--cutlery::before,
+    &--clock::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--leaf::after {
+      top: 66px;
+      left: 28px;
+    }
+
+    &--powder::after {
+      top: 66px;
+      left: 28px;
+    }
+
+    &--cutlery::after {
+      top: 66px;
+      left: 28px;
+    }
+
+    &--clock::after {
+      top: 66px;
+      left: 28px;
+    }
   }
 }
 

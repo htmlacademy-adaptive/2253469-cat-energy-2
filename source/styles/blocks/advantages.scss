@@ -21,26 +21,54 @@
 }
 
 .advantages__item {
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
-
-  &--weightless {
-    background-image: url("../../icons/stack.svg#cat-weightless");
-  }
-
-  &--weightup {
-    background-image: url("../../icons/stack.svg#pantere-weightup");
-  }
-
   @media (min-width: $tablet-width) {
-    height: 372px;
-    background-size: 200px 200px;
+    mask-repeat: no-repeat;
+    position: relative;
+
+    &--weightless::after,
+    &--weightup::after {
+      width: 200px;
+      height: 200px;
+      content: "";
+      display: inline-block;
+      background-color: $basic-green;
+      mask-image: url("../../icons/stack.svg#circle-background");
+    }
+
+    &--weightless::before {
+      content: "";
+      display: inline-block;
+      background-color: $black;
+      mask-image: url("../../icons/stack.svg#black-cat");
+      position: absolute;
+      left: 25px;
+      bottom: 25px;
+      z-index: 1;
+      width: 140px;
+      height: 194px;
+    }
+
+    &--weightup::before {
+      content: "";
+      display: inline-block;
+      background-color: $black;
+      mask-image: url("../../icons/stack.svg#black-pantere");
+      position: absolute;
+      bottom: 42px;
+      left: -28px;
+      z-index: 1;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 214px;
-    width: 570px;
-    height: 374px;
+    &--weightless::after,
+    &--weightup::after,
+    &--weightless::before,
+    &--weightup::before {
+      display: none;
+    }
   }
 }
 
@@ -51,12 +79,33 @@
   padding-left: 110px;
   font-size: 24px;
   line-height: 37px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: $basic-green;
+    mask-image: url("../../icons/stack.svg#circle-background");
+    width: 50px;
+    height: 50px;
+  }
+
 
   @media (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+    }
   }
 }
+
 
 .advantages__discription {
   font-family: $primary-font;
@@ -76,6 +125,16 @@
   line-height: 16px;
   color: $black;
   text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#icon-raw");
+    background-repeat: no-repeat;
+    background-size: 24px 12px;
+    width: 24px;
+    height: 12px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
