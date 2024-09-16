@@ -2,9 +2,6 @@
   color: $black;
 }
 
-.advantages__wrapper {
-
-}
 
 .advantages__list {
   padding: 0;
@@ -20,7 +17,69 @@
   }
 }
 
+.advantages__tittle {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 24px;
+  line-height: 37px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: $basic-green;
+    mask-image: url("../../icons/stack.svg#circle-background");
+    width: 50px;
+    height: 50px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background-color: $black;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
 .advantages__item {
+  &--weightless .advantages__tittle::after {
+    mask-image: url("../../icons/stack.svg#black-cat");
+    background-color: $black;
+    width: 36px;
+    height: 50px;
+    mask-repeat: no-repeat;
+    mask-size: 36px 50px;
+    position: absolute;
+    left: 10px;
+  }
+
+  &--weightup .advantages__tittle::after {
+    mask-image: url("../../icons/stack.svg#black-pantere");
+    background-color: $black;
+    width: 67px;
+    height: 28px;
+    mask-repeat: no-repeat;
+    mask-size: 67px 28px;
+    position: absolute;
+    left: -10px;
+    top: 10px;
+  }
+
   @media (min-width: $tablet-width) {
     mask-repeat: no-repeat;
     position: relative;
@@ -69,39 +128,23 @@
     &--weightup::before {
       display: none;
     }
-  }
-}
 
-.advantages__tittle {
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
-  padding-left: 110px;
-  font-size: 24px;
-  line-height: 37px;
-  position: relative;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    background-color: $basic-green;
-    mask-image: url("../../icons/stack.svg#circle-background");
-    width: 50px;
-    height: 50px;
-  }
-
-
-  @media (min-width: $tablet-width) {
-    &::before {
-      display: none;
+    &--weightless .advantages__tittle::after {
+      display: block;
+      width: 70px;
+      height: 97px;
+      mask-size: 70px 97px;
+      top: -5px;
+      left: 15px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::before {
-      display: inline-block;
-      width: 100px;
-      height: 100px;
+    &--weightup .advantages__tittle::after {
+      display: block;
+      width: 134px;
+      height: 56px;
+      mask-size: 134px 56px;
+      top: 20px;
+      left: -20px;
     }
   }
 }
