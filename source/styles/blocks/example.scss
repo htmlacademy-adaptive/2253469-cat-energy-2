@@ -6,41 +6,71 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  color: #000000;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__text {
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .example__item {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .example__number {
   font-size: 24px;
   font-weight: 24px;
-  color: #000000;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__discription {
   font-family: $primary-font;
   font-size: 12px;
   font-weight: 12px;
-  color: #444444;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__commentary {
   font-size: 14px;
   line-height: 20px;
-  color: #000000;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .example__slider {

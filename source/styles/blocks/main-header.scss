@@ -1,9 +1,23 @@
 .main-header {
+  display: flex;
+  width: 280px;
+  flex-wrap: wrap;
+  margin-top: 13px;
 
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    width: 704px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin-top: 55px;
+  }
 }
 
 .main-header__logo {
-
+  text-decoration: none;
 }
 
 .main-header__logo-picture {
