@@ -1,88 +1,54 @@
 .advantages {
-  color: #000000;
-}
-
-.advantages__wrapper {
-
-}
-
-.advantages__list {
-  margin: 0;
-  list-style-type: none;
-}
-
-.advantages__item {
-  &--weightless {
-    background-image: url("../../icons/stack.svg#cat-weightless");
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-  }
-
-  &--weightup {
-    background-image: url("../../icons/stack.svg#pantere-weightup");
-    background-repeat: no-repeat;
-    background-size: 50px 53px;
-  }
-}
-
-.advantages__tittle {
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
-  padding-left: 110px;
-  font-size: 24px;
-  line-height: 37px;
-}
-
-.advantages__discription {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-}
-
-.advantages__link {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 16px;
-  color: #000000;
-  text-decoration: none;
-}
-
-.advantages {
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 90px 0 30px;
+  }
 }
 
 
 .advantages__list {
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 20px;
   margin: 0;
   list-style-type: none;
 
+  @media (min-width: $tablet-width) {
+    gap: 45px;
+  }
+
   @media (min-width: $desktop-width) {
-    flex-flow: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 }
 
 .advantages__tittle {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 25px;
   font-size: 24px;
   line-height: 37px;
   position: relative;
+  flex-wrap: wrap;
 
   &::before {
     content: "";
     display: inline-block;
     background-color: $basic-green;
-    mask-image: url("../../icons/stack.svg#circle-background");
+    border-radius: 50%;
     width: 50px;
     height: 50px;
+    margin-right: 20px;
   }
 
   &::after {
@@ -92,6 +58,11 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 23px;
+    width: fit-content;
+    font-size: 36px;
+    line-height: 36px;
+
     &::before,
     &::after {
       display: none;
@@ -99,15 +70,22 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    width: 370px;
+
     &::before {
       display: block;
       width: 100px;
       height: 100px;
+      margin-right: 60px;
     }
   }
 }
 
 .advantages__item {
+  padding: 20px 23px 20px 20px;
+  background-color: $bg-color;
+
   &--weightless .advantages__tittle::after {
     mask-image: url("../../icons/stack.svg#black-cat");
     background-color: $black;
@@ -127,13 +105,16 @@
     mask-repeat: no-repeat;
     mask-size: 67px 28px;
     position: absolute;
-    left: -10px;
     top: 10px;
+    left: -10px;
   }
 
   @media (min-width: $tablet-width) {
     mask-repeat: no-repeat;
     position: relative;
+    padding: 68px 63px 53px 53px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
 
     &--weightless::after,
     &--weightup::after {
@@ -142,7 +123,10 @@
       content: "";
       display: inline-block;
       background-color: $basic-green;
-      mask-image: url("../../icons/stack.svg#circle-background");
+      border-radius: 50%;
+      position: absolute;
+      top: 80px;
+      right: 63px;
     }
 
     &--weightless::before {
@@ -151,8 +135,8 @@
       background-color: $black;
       mask-image: url("../../icons/stack.svg#black-cat");
       position: absolute;
-      left: 25px;
-      bottom: 25px;
+      top: 69px;
+      right: 91px;
       z-index: 1;
       width: 140px;
       height: 194px;
@@ -164,8 +148,8 @@
       background-color: $black;
       mask-image: url("../../icons/stack.svg#black-pantere");
       position: absolute;
-      bottom: 42px;
-      left: -28px;
+      top: 126px;
+      right: 28px;
       z-index: 1;
       width: 268px;
       height: 112px;
@@ -173,6 +157,10 @@
   }
 
   @media (min-width: $desktop-width) {
+
+    padding: 40px 60px 55px 50px;
+    width: 460px;
+
     &--weightless::after,
     &--weightup::after,
     &--weightless::before,
@@ -202,36 +190,84 @@
 
 
 .advantages__discription {
+  margin: 0 0 20px;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey;
 
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #d9d9d9;
+    margin-top: 23px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    width: 58%;
+    margin: 0 0 50px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin-bottom: 23px;
   }
 }
 
 .advantages__link {
+  display: flex;
+  justify-content: space-between;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
   color: $black;
   text-decoration: none;
+  width: fit-content;
+
 
   &::after {
     content: "";
     display: block;
     background-image: url("../../icons/stack.svg#icon-raw");
     background-repeat: no-repeat;
-    background-size: 24px 12px;
-    width: 24px;
+    background-size: 32px 12px;
+    background-position: -8px;
+    width: 32px;
     height: 12px;
+    margin-left: 15px;
+  }
+
+  &:hover::after {
+    background-position: center;
+  }
+
+  &:focus::after {
+    background-position: center;
+    opacity: 0.3;
+  }
+
+  &:focus {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 }

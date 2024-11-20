@@ -1,12 +1,7 @@
 .page {
   background-color: $white;
-  padding: 0 20px;
+}
 
-  @media (min-width: $tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-  }
+.page__body {
+  margin: 0 auto;
 }

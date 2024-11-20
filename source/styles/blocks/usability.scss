@@ -1,12 +1,35 @@
 .usability {
   color: $dark-grey;
-}
+  padding: 20px 0 50px;
 
-.usability__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 30px 0 50px;
+    position: relative;
 
+    &::after {
+      content: "";
+      background-color: #e6e6e6;
+      width: 100vw;
+      height: 1px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      box-shadow: 100vw 0 0 #e6e6e6;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 0;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .usability__tittle {
+  margin: 0 0 40px;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -15,121 +38,103 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 20px;
   }
 }
 
 .usability__list {
+  display: grid;
+  gap: 20px;
   padding: 0;
   margin: 0;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 40px 136px;
+    counter-reset: item;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 77px;
   }
 }
 
 .usability__item {
-  padding-bottom: 24px;
-  padding-top: 42px;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   position: relative;
+  display: flex;
+  align-items: center;
 
-  &--leaf::before,
-  &--powder::before,
-  &--cutlery::before,
-  &--clock::before {
+
+  &::before {
     content: "";
-    mask-image: url("../../icons/stack.svg#square-background");
     width: 60px;
     height: 60px;
     display: inline-block;
     background-color: $basic-green;
+    margin-right: 20px;
+    flex-shrink: 0;
+    background-size: 26px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  &--leaf::after {
-    content: "";
-    mask-image: url("../../icons/stack.svg#leaf");
-    background-color: $white;
-    position: absolute;
-    width: 26px;
-    height: 30px;
-    top: 57px;
-    left: 18px;
+  &--leaf::before {
+    background-image: url("../../icons/stack.svg#leaf");
   }
 
-  &--powder::after {
-    content: "";
-    mask-image: url("../../icons/stack.svg#powder");
-    background-color: $white;
-    position: absolute;
-    width: 26px;
-    height: 30px;
-    top: 57px;
-    left: 18px;
+  &--powder::before {
+    background-image: url("../../icons/stack.svg#powder");
   }
 
-  &--cutlery::after {
-    content: "";
-    mask-image: url("../../icons/stack.svg#cutlery");
-    background-color: $white;
-    position: absolute;
-    width: 26px;
-    height: 30px;
-    top: 57px;
-    left: 18px;
+  &--cutlery::before {
+    background-image: url("../../icons/stack.svg#cutlery");
   }
 
-  &--clock::after {
-    content: "";
-    mask-image: url("../../icons/stack.svg#clock");
-    background-color: $white;
-    position: absolute;
-    width: 26px;
-    height: 30px;
-    top: 57px;
-    left: 18px;
+  &--clock::before {
+    background-image: url("../../icons/stack.svg#clock");
   }
 
   @media (min-width: $tablet-width) {
-    width: 204px;
-    height: 72px;
-    background-size: 80px 80px;
+    padding: 50px 17px 46px 0;
+    width: 230px;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    gap: 30px;
+    background-size: 136px 280px;
+    position: relative;
 
-    &--leaf::before,
-    &--powder::before,
-    &--cutlery::before,
-    &--clock::before {
+    &::after {
+      color: $bg-color;
+      counter-increment: item;
+      font-size: 280px;
+      line-height: 280px;
+      content: counter(item);
+      font-family: $secondary-font;
+      position: absolute;
+      z-index: -1;
+      top: 10px;
+      right: 0;
+      left: 120px;
+    }
+
+
+    &::before {
       width: 80px;
       height: 80px;
-    }
-
-    &--leaf::after {
-      top: 66px;
-      left: 28px;
-    }
-
-    &--powder::after {
-      top: 66px;
-      left: 28px;
-    }
-
-    &--cutlery::after {
-      top: 66px;
-      left: 28px;
-    }
-
-    &--clock::after {
-      top: 66px;
-      left: 28px;
+      margin: 0;
     }
   }
 }
 
-.usability__discription {
+.usability__text {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
@@ -137,5 +142,6 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    width: 245px;
   }
 }

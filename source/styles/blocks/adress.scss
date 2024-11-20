@@ -1,5 +1,7 @@
 .adress {
-
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .adress__title {
@@ -7,11 +9,40 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 163px;
+  }
 }
 
 .adress__text {
+  font-style: normal;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+  margin-bottom: -5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.adress__discription {
+  font-style: normal;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    display: block;
+  }
 }

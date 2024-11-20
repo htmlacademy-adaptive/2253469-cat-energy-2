@@ -1,11 +1,18 @@
-.stats {
-
-}
 
 .stats__discription {
-
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      display: block;
+      width: 200%;
+      height: 1px;
+      background-color: #cdcdcd;
+      margin-top: 5px;
+    }
+  }
 }
 
 .stats__number {
-
+  margin: 0;
+  text-align: end;
 }

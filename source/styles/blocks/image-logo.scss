@@ -1,1 +1,34 @@
-.image-logo {}
+.image-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: #111111;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    transform: translate(0);
+    margin-left: 14px;
+    left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+    margin-left: 10px;
+  }
+
+  &--footer {
+    margin: 0;
+    position: relative;
+    fill: #111111;
+
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+      width: 128px;
+      height: 24px;
+    }
+  }
+}
+
