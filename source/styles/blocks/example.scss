@@ -256,10 +256,24 @@
   height: 100%;
   opacity: 0;
 
-  &:hover + .example__slider-line,
-  &:focus + .example__slider-line,
-  &:hover + .example__slider-line::before {
+  &:hover + .example__slider-line {
     background-color: $basic-green;
+  }
+
+  &:hover + .example__slider-line .example__slider-button {
+    fill: $basic-green;
+    border: 3px solid $basic-green;
+  }
+
+  &:active + .example__slider-line {
+    opacity: 0.6;
+    background-color: #5eaa2f;
+  }
+
+  &:active + .example__slider-line .example__slider-button {
+    opacity: 0.6;
+    fill: #5eaa2f;
+    border: 3px solid #5eaa2f;
   }
 }
 
@@ -273,33 +287,30 @@
   left: var(--position);
   transform: translateX(-50%);
   pointer-events: none;
+}
 
-  &::before {
-    content: "";
-    background-image: url("../../images/slider-button.svg");
-    background-repeat: no-repeat;
-    background-color: $white;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-position: center;
-    position: absolute;
-    border: 3px solid #666666;
-    pointer-events: none;
-    left: var(--position);
-    transform: translateX(-50%);
-    top: 42%;
+.example__slider-button {
+  background-color: $white;
+  background-size: 40px 40px;
+  width: 24px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid #666666;
+  pointer-events: none;
+  left: var(--position);
+  transform: translateX(-50%);
+  top: 42%;
+  fill: #666666;
+  padding: 8px;
+
+  @media (min-width: $tablet-width) {
+
+    top: 44%;
   }
 
   @media (min-width: $tablet-width) {
-    &::before {
-      top: 44%;
-    }
-  }
 
-  @media (min-width: $tablet-width) {
-    &::before {
-      top: 46%;
-    }
+    top: 46%;
   }
 }

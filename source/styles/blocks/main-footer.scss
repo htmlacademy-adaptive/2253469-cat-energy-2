@@ -169,13 +169,14 @@
 
 
   &:hover .main-footer__academy-logo {
-    fill: #68b738;
+    fill: $basic-green;
   }
 
   &:active .main-footer__academy-logo,
   &:active .main-footer__academy-title {
     opacity: 0.3;
-    fill: #68b738;
+    fill: $basic-green;
+    color: $dark-grey;
   }
 
 
