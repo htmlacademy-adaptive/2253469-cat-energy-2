@@ -1,0 +1,131 @@
+.show-more {
+  padding: 25px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vh;
+    height: 1px;
+    background-color: #d9d9dd;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    box-shadow: 100vw 0 0 #d9d9dd;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 37px 40px;
+    border: 1px solid $bg-color;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 80px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 0 40px;
+  }
+}
+
+.show-more__title {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../icons/icon-plus.svg");
+    width: 30px;
+    height: 30px;
+    margin: -3px auto 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 24px;
+    width: 134px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      margin: -3px auto 52px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+
+    &::before {
+      margin: 0 auto 40px;
+    }
+  }
+}
+
+.show-more__discription {
+  text-align: center;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-grey;
+  margin: 0;
+  padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 82px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 90px;
+  }
+}
+
+.show-more__button {
+  background-color: $bg-color;
+  text-decoration: none;
+  color: $dark-grey;
+  text-align: center;
+  padding: 10px 75px;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    background-color: #ebebeb;
+    color: $dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 90px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 39px;
+    margin: 0 38px 40px;
+  }
+}
+

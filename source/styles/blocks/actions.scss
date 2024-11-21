@@ -1,0 +1,160 @@
+.actions {
+  color: #000000;
+  padding: 15px 0 42px;
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 0 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 62px 0 105px;
+  }
+}
+
+.actions__wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 35px;
+  }
+}
+
+.actions__tittle {
+  margin: 0 0 32px;
+  padding: 0 40px 0 0;
+  background-color: $white;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  position: relative;
+  z-index: 0;
+  width: fit-content;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green;
+    top: 50%;
+    box-shadow: 100vw 0 0 $basic-green;
+    right: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    top: 0;
+    left: -30px;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: 100%;
+    background: $white;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    background-color: $white;
+    padding: 0 40px;
+    width: fit-content;
+    text-wrap: wrap;
+    margin-bottom: 65px;
+
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 70px;
+    width: fit-content;
+    padding: 0;
+
+    &::after {
+      width: calc(100% + 80px);
+      left: -40px;
+    }
+  }
+}
+
+.actions__discription {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 66px;
+    margin-bottom: 24px;
+  }
+}
+
+.actions__following-form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 632px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 752px;
+    padding: 0;
+  }
+}
+
+.actions__field-subscribe {
+  width: 254px;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 30px;
+  color: #444444;
+  margin-bottom: 13px;
+  padding: 12px;
+  font-family: $secondary-font;
+
+  &:hover {
+    outline: 1px #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px $dark-grey;
+  }
+
+  &:invalid {
+    outline: 2px #ff8282;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.actions__following-button {
+  color: $white;
+  border: none;
+  padding: 15px 81px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 70px;
+  }
+}
