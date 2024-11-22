@@ -1,6 +1,29 @@
 .main-header {
   margin: 0 auto;
 
+
+  &--opened {
+    display: block;
+    z-index: 1;
+    right: 0;
+
+    & .main-nav {
+      display: block;
+    }
+  }
+
+  &--closed {
+    & .main-nav {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      & .main-nav {
+        display: block;
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: space-between;
   }
@@ -87,5 +110,67 @@
 
   &:focus {
     opacity: 0.6;
+  }
+}
+
+.main-header__toggle {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: block;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--open {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 24px;
+      background-color: $black;
+      left: 10px;
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 24px;
+      background-color: $black;
+      left: 10px;
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--burger {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+      left: -2px;
+      top: 2px;
+      box-shadow: 0 8px 0 $black;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+      left: -2px;
+      bottom: 3px;
+    }
   }
 }

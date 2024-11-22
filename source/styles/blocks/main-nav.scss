@@ -2,9 +2,11 @@
   color: $black;
   font-size: 20px;
   line-height: 20px;
-  position: absolute;
   background-color: $white;
   width: 100%;
+  z-index: 2;
+  position: absolute;
+  left: 0;
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -13,6 +15,7 @@
     font-size: 18px;
     line-height: 24px;
     margin-right: 5px;
+    display: block;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,83 +27,6 @@
     padding-left: 133px;
     box-sizing: border-box;
   }
-}
-
-.no-js {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-}
-
-.main-nav__toggle {
-  cursor: pointer;
-  background-color: #ffffff;
-  border: none;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  display: block;
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  &--open {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 2px;
-      height: 24px;
-      background-color: $black;
-      left: 10px;
-      top: 0;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 2px;
-      height: 24px;
-      background-color: $black;
-      left: 10px;
-      top: 0;
-      transform: rotate(-45deg);
-    }
-  }
-
-  &--burger {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 24px;
-      height: 2px;
-      background-color: $black;
-      left: -2px;
-      top: 2px;
-      box-shadow: 0 8px 0 $black;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 24px;
-      height: 2px;
-      background-color: $black;
-      left: -2px;
-      bottom: 4px;
-    }
-  }
-}
-
-
-.main-nav--opened {
-  display: block;
-  z-index: 1;
-  right: 0;
 }
 
 

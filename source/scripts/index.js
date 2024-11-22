@@ -1,19 +1,27 @@
 
 
-const button = document.querySelector('.main-nav__toggle');
+const button = document.querySelector('.main-header__toggle');
 
-const nav = document.querySelector('nav');
+const header = document.querySelector('header');
 
-nav.classList.remove('.no-js');
+header.classList.remove('no-js');
+
+header.classList.remove('main-header--opened');
+
+header.classList.add('main-header--closed');
+
 
 button.addEventListener('click', () => {
-  nav.classList.toggle('main-nav--opened');
-  if(nav.classList.contains('main-nav--opened')){
-    button.classList.remove('main-nav__toggle--burger');
-    button.classList.add('main-nav__toggle--open');
+  if(header.classList.contains('main-header--opened')){
+    header.classList.add('main-header--closed');
+    header.classList.remove('main-header--opened');
+    button.classList.add('main-header__toggle--burger');
+    button.classList.remove('main-header__toggle--open');
   } else{
-    button.classList.add('main-nav__toggle--burger');
-    button.classList.remove('main-nav__toggle--open');
+    header.classList.remove('main-header--closed');
+    header.classList.add('main-header--opened');
+    button.classList.remove('main-header__toggle--burger');
+    button.classList.add('main-header__toggle--open');
   }
 });
 
