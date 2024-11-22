@@ -13,22 +13,22 @@
   @media (min-width: $mobile-width) {
     padding: 0;
   }
+}
 
-  &--adress {
-    padding: 26px 20px;
+.main-footer__adress {
+  padding: 26px 20px;
 
-    @media (min-width: $tablet-width) {
-      padding: 60px 70px;
-    }
+  @media (min-width: $tablet-width) {
+    padding: 60px 70px;
+  }
 
-    @media (min-width: $desktop-width) {
-      position: absolute;
-      z-index: 1;
-      background-color: $white;
-      width: 407px;
-      margin: 95px 0 0 110px;
-      padding: 60px 80px;
-    }
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 1;
+    background-color: $white;
+    width: 407px;
+    margin: 95px 0 0 110px;
+    padding: 60px 80px;
   }
 }
 
